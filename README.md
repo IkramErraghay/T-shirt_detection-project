@@ -52,7 +52,7 @@ project/
 ```
 
 1. Les images et annotations sont chargées via `dataset.py` et on a la génération des masques pour la segmentation
-2. Le Chargement et division du dataset (80% train, 20% validation) et l'entraînement est géré par `train.py`
+2. Le Chargement et division du dataset (80% train, 20% validation) et l'entraînement du model est géré par `train.py`
 3. Le Chargement du modèle entraîné et les prédictions sur nouvelles images sont faites via `inference.py`
 
 ## Hyperparamètres et Configuration
