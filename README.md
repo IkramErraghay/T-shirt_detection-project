@@ -113,6 +113,7 @@ On a utilisé le modèle entrainé sur de nouveaux images de test voici le résu
     <img src="config1/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
     <img src="config1/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
 </div>
+
 Pour explorer des possiblités d'amélioer ces résultats on a remplacé SGD par l'optimiseur Adam voici la nouvelle configurations
 ### Configuration 2 du model
 ```python
