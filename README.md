@@ -58,7 +58,7 @@ python train.py
 ```
 3. Le Chargement du modèle entraîné et les prédictions sur nouvelles images sont faites via `inference.py`
 ```bash
-python inference.py --image path/to/image
+python inference.py 
 ```
 
 ## Hyperparamètres et Configuration
