@@ -42,16 +42,18 @@ le Dockerfile gère automatiquement l'installation de :
 ## Structure du Projet
 ```
 project/
-│
-├── dataset.py         # Définition du dataset personnalisé
-├── train.py           # Script d'entraînement du modèle
+├── dataset.py          # Gestion du dataset et configuration du modèle  (`CustomConfig`)
+├── train.py           # Script d'entraînement
 ├── inference.py       # Script pour les prédictions
-├── Dockerfile         # Configuration Docker
-│
-└── dataset/
-    ├── images/        # Images d'entraînement(train+validation)
-    └── annotations.json # Annotations des images
+├── dataset/
+│   ├── images/        # Images d'entraînement
+│   └── annotations/   # Fichiers d'annotation JSON
+└── logs/             # Logs d'entraînement et modèles sauvegardés
 ```
+
+1. Les images et annotations sont chargées via `dataset.py` et on a la génération des masques pour la segmentation
+2. Le Chargement et division du dataset (80% train, 20% validation) et l'entraînement est géré par `train.py`
+3. Le Chargement du modèle entraîné et les prédictions sur nouvelles images sont faites via `inference.py`
 
 ## Hyperparamètres et Configuration
 
