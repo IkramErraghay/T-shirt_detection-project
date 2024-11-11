@@ -62,7 +62,7 @@ python inference.py
 
 ## Hyperparamètres et Configuration
 la première configuration pour l'entraînement du modèle est la suivante:
-### Configuration 1 du Modèle
+### Configuration 1 du model
 ```python
 IMAGES_PER_GPU = 1
     NUM_CLASSES = 1 + 1  # Arrière-plan + T-shirt
@@ -108,11 +108,23 @@ Voici les derniers logs d'entraînement (Époque 10) :
 
 #### 3. Exemples de Détection
 
-On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
+On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat qu'il a pu détecter:
 <div style="display: flex; justify-content: center; gap: 30px;">
     <img src="config1/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
     <img src="config1/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
 </div>
+Pour explorer des possiblités d'amélioer ces résultats on a remplacé SGD par l'optimiseur Adam voici la nouvelle configurations
+### Configuration 2 du model
+```python
+IMAGES_PER_GPU = 1
+    NUM_CLASSES = 1 + 1  # Arrière-plan + T-shirt
+    STEPS_PER_EPOCH = 100
+    IMAGE_MAX_DIM = 256
+    IMAGE_MIN_DIM = 256
+    LEARNING_RATE = 0.001
+    OPTIMIZER = 'adam'
+    EPOCHS = 10
+```
 
 
 
