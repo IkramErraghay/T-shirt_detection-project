@@ -42,7 +42,6 @@ project/
 ├── dataset.py          # Définition du dataset personnalisé
 ├── train.py           # Script d'entraînement du modèle
 ├── inference.py       # Script pour les prédictions
-├── visualize.py       # Outils de visualisation
 ├── Dockerfile         # Configuration Docker
 ├── .gitignore        # Configuration Git
 │
