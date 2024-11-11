@@ -71,8 +71,10 @@ IMAGES_PER_GPU = 1
 Voici les differents résultats d'entrainement obtenus:
 
 #### 1. Courbe de Perte (Loss)
+Le graphe ci-dessous montre les traing loss et validation loss 
 ![Courbe d'entraînement](training_validation_loss.png)
 *Figure 1: Évolution des pertes d'entraînement et de validation sur 10 époques*
+La perte de validation reste inférieure à la perte d'entraînement donc notre modèle généralise bien sans overfitting.
 
 #### 2. Dernière Ligne des Logs
 Les logs complets de l'entraînement sont sauvegardés dans deux fichiers :
