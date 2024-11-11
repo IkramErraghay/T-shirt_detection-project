@@ -43,14 +43,13 @@ le Dockerfile gère automatiquement l'installation de :
 ```
 project/
 │
-├── dataset.py          # Définition du dataset personnalisé
+├── dataset.py         # Définition du dataset personnalisé
 ├── train.py           # Script d'entraînement du modèle
 ├── inference.py       # Script pour les prédictions
 ├── Dockerfile         # Configuration Docker
-├── .gitignore        # Configuration Git
 │
 └── dataset/
-    ├── images/        # Images d'entraînement
+    ├── images/        # Images d'entraînement(train+validation)
     └── annotations.json # Annotations des images
 ```
 
