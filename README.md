@@ -82,13 +82,5 @@ python train.py
 python inference.py --image path/to/image
 ```
 
-## Améliorations Possibles
-- Augmentation de la taille du dataset
-- Test de différents hyperparamètres :
-  - Learning rates plus bas
-  - Plus d'epochs
-  - Différents optimiseurs
-- Fine-tuning des couches plus profondes
-- Augmentation de données
 
 
