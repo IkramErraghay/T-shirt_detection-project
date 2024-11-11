@@ -107,9 +107,7 @@ Voici les derniers logs d'entraînement (Époque 10) :
 On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
 
 <img src="config1/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
-
 <img src="config1/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
-
 
 ### Hyperparamètres d'Entraînement
 - **Learning Rate** : 0.01
