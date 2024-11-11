@@ -53,7 +53,13 @@ project/
 
 1. Les images et annotations sont chargées via `dataset.py` et on a la génération des masques pour la segmentation
 2. Le Chargement et division du dataset (80% train, 20% validation) et l'entraînement du model est géré par `train.py`
+```bash
+python train.py
+```
 3. Le Chargement du modèle entraîné et les prédictions sur nouvelles images sont faites via `inference.py`
+```bash
+python inference.py --image path/to/image
+```
 
 ## Hyperparamètres et Configuration
 la première configuration pour l'entraînement du modèle est la suivante:
@@ -109,24 +115,12 @@ Voici les derniers logs d'entraînement (Époque 10) :
 2. Fine-tuning des couches de tête
 3. Entraînement sur le dataset personnalisé
 
-### Résultats
-  image
-- Loss d'entraînement
-- Loss de validation
-- Matrice de confusion
+
 - Images de test avec prédictions
 
-## Utilisation
 
-### Entraînement
-```bash
-python train.py
-```
 
-### Inférence
-```bash
-python inference.py --image path/to/image
-```
+
 
 
 
