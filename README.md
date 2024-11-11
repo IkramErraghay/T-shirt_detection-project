@@ -148,6 +148,58 @@ Epoch 8, Loss: nan, Validation Loss: nan
 Epoch 9, Loss: nan, Validation Loss: nan
 Epoch 10, Loss: nan, Validation Loss: nan
 ```
+### Configuration 4 du Modèle
+on testé de changé l'optimisateur par 'adam' et garder un learning rate bas 0.0001, l'apprentissage serait était trop lent
+```python
+IMAGES_PER_GPU = 1
+    NUM_CLASSES = 1 + 1  # Arrière-plan + T-shirt
+    STEPS_PER_EPOCH = 50
+    IMAGE_MAX_DIM = 256
+    IMAGE_MIN_DIM = 256
+    LEARNING_RATE = 0.0001
+    OPTIMIZER = 'adam'
+    EPOCHS = 10
+```
+Voici les differents résultats d'entrainement obtenus:
+
+#### 1. Courbe de Perte (Loss)
+
+Le graphe ci-dessous montre l'évolution des pertes de training loss et validation loss sur 10 époques.
+
+![Courbe d'entraînement](config4/training_validation_loss.png)
+
+
+La perte de validation reste inférieure à la perte d'entraînement donc notre modèle généralise bien sans overfitting.
+
+#### 2. Dernière Ligne des Logs
+Les logs complets de l'entraînement sont sauvegardés dans deux fichiers :
+- training_logs.txt : Enregistre spécifiquement les losses et validation_losses de chaque époque (dans config1/training_logs.txt)
+```
+Epoch 7, Loss: 0.474196954369545, Validation Loss: 0.5376814070343972
+Epoch 8, Loss: 0.5429598882049322, Validation Loss: 0.4835761894285679
+Epoch 9, Loss: 0.47915269307792185, Validation Loss: 0.3347528874874115
+Epoch 10, Loss: 0.5557353990525007, Validation Loss: 0.39468212202191355
+```
+- log.txt : Contient tous les détails d'entraînement dans config1/log.txt
+Voici les derniers logs d'entraînement (Époque 10) :
+```
+ 93/100 [==========================>...] - ETA: 1:52 - loss: 0.5784 - rpn_class_loss: 0.0215 - rpn_bbox_loss: 0.2328 - mrcnn_class_loss: 0.0207 - mrcnn_bbox_loss: 0.1109 - mrcnn_mask_loss: 0.1926
+ 94/100 [===========================>..] - ETA: 1:36 - loss: 0.5751 - rpn_class_loss: 0.0213 - rpn_bbox_loss: 0.2312 - mrcnn_class_loss: 0.0206 - mrcnn_bbox_loss: 0.1105 - mrcnn_mask_loss: 0.1916
+ 95/100 [===========================>..] - ETA: 1:20 - loss: 0.5760 - rpn_class_loss: 0.0211 - rpn_bbox_loss: 0.2332 - mrcnn_class_loss: 0.0204 - mrcnn_bbox_loss: 0.1108 - mrcnn_mask_loss: 0.1904
+ 96/100 [===========================>..] - ETA: 1:04 - loss: 0.5713 - rpn_class_loss: 0.0209 - rpn_bbox_loss: 0.2310 - mrcnn_class_loss: 0.0202 - mrcnn_bbox_loss: 0.1102 - mrcnn_mask_loss: 0.1890
+ 97/100 [============================>.] - ETA: 48s - loss: 0.5674 - rpn_class_loss: 0.0208 - rpn_bbox_loss: 0.2292 - mrcnn_class_loss: 0.0201 - mrcnn_bbox_loss: 0.1093 - mrcnn_mask_loss: 0.1879 
+ 98/100 [============================>.] - ETA: 32s - loss: 0.5641 - rpn_class_loss: 0.0206 - rpn_bbox_loss: 0.2273 - mrcnn_class_loss: 0.0200 - mrcnn_bbox_loss: 0.1093 - mrcnn_mask_loss: 0.1869
+ 99/100 [============================>.] - ETA: 16s - loss: 0.5597 - rpn_class_loss: 0.0204 - rpn_bbox_loss: 0.2254 - mrcnn_class_loss: 0.0198 - mrcnn_bbox_loss: 0.1085 - mrcnn_mask_loss: 0.1856
+100/100 [==============================] - 1709s 17s/step - loss: 0.5557 - rpn_class_loss: 0.0202 - rpn_bbox_loss: 0.2235 - mrcnn_class_loss: 0.0197 - mrcnn_bbox_loss: 0.1078 - mrcnn_mask_loss: 0.1845 - val_loss: 0.3947 - val_rpn_class_loss: 0.0094 - val_rpn_bbox_loss: 0.1267 - val_mrcnn_class_loss: 0.0123 - val_mrcnn_bbox_loss: 0.1065 - val_mrcnn_mask_loss: 0.1396
+```
+
+#### 3. Exemples de Détection
+
+On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
+<div style="display: flex; justify-content: center; gap: 30px;">
+    <img src="config4/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
+    <img src="config4/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
+</div>
 
 
 
