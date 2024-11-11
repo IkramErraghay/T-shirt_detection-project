@@ -1,8 +1,7 @@
 # T-shirt Detection Using Mask R-CNN
 
 ## Description du Projet
-Ce projet implémente un système de détection et de segmentation de T-shirts utilisant Mask R-CNN. 
-re entrainer les head layers du coco model
+Ce projet utilise Mask R-CNN pour détecter et segmenter des T-shirts en réutilisant les poids du modèle COCO pré-entraîné et en ré-entraînant uniquement les head layers..
 
 
 ### Préparation de l'Environnement
@@ -115,18 +114,9 @@ On a utilisé le modèle entrainé sur de nouveaux images de test voici le résu
     <img src="config1/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
 </div>
 
-### Hyperparamètres d'Entraînement
-- **Learning Rate** : 0.01
-- **Optimiseur** : Adam
-- **Epochs** : 5
-- **Layers** : "heads" (uniquement les couches de tête)
 
 
 
-
-
-
-- Images de test avec prédictions
 
 
 
