@@ -1,5 +1,5 @@
 # T-shirt_detection-project
-# Projet de Détection d'Objets
+
 
 ## Description
 Projet de détection d'objets réalisé dans le cadre du cours de [nom du cours].
