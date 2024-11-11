@@ -170,7 +170,7 @@ Le graphe ci-dessous montre l'évolution des pertes de training loss et validati
 ![Courbe d'entraînement](config4/training_validation_loss.png)
 
 
-La perte de validation reste inférieure à la perte d'entraînement donc notre modèle généralise bien sans overfitting.
+La perte de validation reste inférieure à la perte d'entraînement supérieure à 1.0 donc notre modèle a une moins bonne généralisation mais sans overfitting.
 
 #### 2. Dernière Ligne des Logs
 Les logs complets de l'entraînement sont sauvegardés dans deux fichiers :
@@ -196,7 +196,7 @@ Voici les derniers logs d'entraînement (Époque 10) :
 #### 3. Exemples de Détection
 
 On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
-<div style="display: flex; justify-content: center; gap: 30px;">
+<div style="display: flex; justify-content: center; gap: 20px;">
     <img src="config4/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
     <img src="config4/output/inference_avec-une-bonne-organisation-le-premier-atout-du-batch-cooking-est-le-gain-de-temps-photo-adobe-stock-1686065096.jpg" alt="Exemple de détection" width="500"/>
 </div>
