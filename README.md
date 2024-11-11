@@ -3,23 +3,6 @@
 ## Description du Projet
 Ce projet implémente un système de détection et de segmentation de T-shirts utilisant Mask R-CNN. 
 
-## Structure du Projet
-```
-project/
-│
-├── dataset.py          # Définition du dataset personnalisé
-├── train.py           # Script d'entraînement du modèle
-├── inference.py       # Script pour les prédictions
-├── visualize.py       # Outils de visualisation
-├── Dockerfile         # Configuration Docker
-├── .gitignore        # Configuration Git
-│
-└── dataset/
-    ├── images/        # Images d'entraînement
-    └── annotations.json # Annotations des images
-```
-
-
 
 ### Préparation de l'Environnement
 
@@ -51,6 +34,22 @@ le Dockerfile gère automatiquement l'installation de :
 - **Taille** : 202 images de T-shirts
 - **Format** : Annotations au format JSON par VIA pour l'annotation 
 - **Structure** : Images labélisées avec des masques polygonaux
+
+## Structure du Projet
+```
+project/
+│
+├── dataset.py          # Définition du dataset personnalisé
+├── train.py           # Script d'entraînement du modèle
+├── inference.py       # Script pour les prédictions
+├── visualize.py       # Outils de visualisation
+├── Dockerfile         # Configuration Docker
+├── .gitignore        # Configuration Git
+│
+└── dataset/
+    ├── images/        # Images d'entraînement
+    └── annotations.json # Annotations des images
+```
 
 ## Hyperparamètres et Configuration
 
