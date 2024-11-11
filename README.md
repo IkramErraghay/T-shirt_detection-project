@@ -2,6 +2,7 @@
 
 ## Description du Projet
 Ce projet implémente un système de détection et de segmentation de T-shirts utilisant Mask R-CNN. 
+re entrainer les head layers du coco model
 
 
 ### Préparation de l'Environnement
