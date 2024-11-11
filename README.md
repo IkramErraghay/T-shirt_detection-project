@@ -62,7 +62,7 @@ python inference.py
 
 ## Hyperparamètres et Configuration
 la première configuration pour l'entraînement du modèle est la suivante:
-### Configuration 1 du model
+### Configuration 1 du Modèle
 ```python
 IMAGES_PER_GPU = 1
     NUM_CLASSES = 1 + 1  # Arrière-plan + T-shirt
@@ -108,27 +108,44 @@ Voici les derniers logs d'entraînement (Époque 10) :
 
 #### 3. Exemples de Détection
 
-On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat qu'il a pu détecter:
+On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
 <div style="display: flex; justify-content: center; gap: 30px;">
     <img src="config1/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
     <img src="config1/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
 </div>
-
 Pour explorer des possiblités d'amélioer ces résultats on a remplacé SGD par l'optimiseur Adam voici la nouvelle configurations
-### Configuration 2 du model
+
+### Configuration 2 du Modèle
+Nous avons testé deux configurations supplémentaires avec un learning rate plus élevé (0.01) en utilisant 'Adam' et 'SGD':
+
 ```python
+# Configurations 2 et 3
 IMAGES_PER_GPU = 1
-    NUM_CLASSES = 1 + 1  # Arrière-plan + T-shirt
-    STEPS_PER_EPOCH = 100
-    IMAGE_MAX_DIM = 256
-    IMAGE_MIN_DIM = 256
-    LEARNING_RATE = 0.001
-    OPTIMIZER = 'adam'
-    EPOCHS = 10
+NUM_CLASSES = 1 + 1
+STEPS_PER_EPOCH = 50
+EPOCHS = 10
+IMAGE_MAX_DIM = 256
+IMAGE_MIN_DIM = 256
+LEARNING_RATE = 0.01
+OPTIMIZER = ['adam', 'sgd']  # Testé avec les deux optimiseurs
 ```
 
-
-
+Ces configurations avec un learning rate plus élevé (0.01 vs 0.001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient.
+```
+Epoch 1, Loss: 1.8442893350124359, Validation Loss: 1.3141049003601075
+Epoch 2, Loss: 1.3648225152492524, Validation Loss: 0.8775486958026886
+Epoch 3, Loss: 1.2045146095752717, Validation Loss: 1.3633794105052948
+Epoch 1, Loss: 1.825877447128296, Validation Loss: 1.2739704883098601
+Epoch 2, Loss: 1.1321923249959946, Validation Loss: 1.1798729169368745
+Epoch 3, Loss: 1.1944658493995666, Validation Loss: 2.631324108839035
+Epoch 4, Loss: 1.4473659992218018, Validation Loss: 1.1461294502019883
+Epoch 5, Loss: 0.8068634074926376, Validation Loss: 1.1516182518005371
+Epoch 6, Loss: 1.6554887092113495, Validation Loss: 1.370980622768402
+Epoch 7, Loss: nan, Validation Loss: nan
+Epoch 8, Loss: nan, Validation Loss: nan
+Epoch 9, Loss: nan, Validation Loss: nan
+Epoch 10, Loss: nan, Validation Loss: nan
+```
 
 
 
