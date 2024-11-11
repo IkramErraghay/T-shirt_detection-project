@@ -77,9 +77,12 @@ IMAGES_PER_GPU = 1
 Voici les differents résultats d'entrainement obtenus:
 
 #### 1. Courbe de Perte (Loss)
-Le graphe ci-dessous montre les traing loss et validation loss 
+
+Le graphe ci-dessous montre les training loss et validation loss.
+
 ![Courbe d'entraînement](training_validation_loss.png)
 *Figure 1: Évolution des pertes d'entraînement et de validation sur 10 époques*
+
 La perte de validation reste inférieure à la perte d'entraînement donc notre modèle généralise bien sans overfitting.
 
 #### 2. Dernière Ligne des Logs
@@ -108,12 +111,9 @@ Voici les derniers logs d'entraînement (Époque 10) :
 - **Epochs** : 5
 - **Layers** : "heads" (uniquement les couches de tête)
 
-## Entraînement
 
-### Procédure
-1. Chargement des poids pré-entraînés COCO
-2. Fine-tuning des couches de tête
-3. Entraînement sur le dataset personnalisé
+
+
 
 
 - Images de test avec prédictions
