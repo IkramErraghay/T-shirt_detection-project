@@ -6,7 +6,7 @@ Ce projet utilise Mask R-CNN pour détecter et segmenter des T-shirts en réutil
 
 ### Préparation de l'Environnement
 
-Pour assurer une reproduction fiable de notre environnement de développement et vu les probèmes de compatibilité, nous avons mis en place un environnement Docker incluant toutes les dépendances nécessaires à Mask R-CNN avec les versions spécifiquese. Cette approche nous permet de garantir la cohérence des versions des bibliothèques et des dépendances.
+Pour assurer une reproduction fiable de notre environnement de développement et vu les probèmes de compatibilité, nous avons mis en place un environnement Docker incluant toutes les dépendances nécessaires à Mask R-CNN avec les versions spécifiques qui datent de 2017. Cette approche nous permet de garantir la cohérence des versions des bibliothèques et des dépendances.
 Nous avons configuré un environnement avec les versions suivantes :
 
 - Python 3.5.4
@@ -29,7 +29,7 @@ le Dockerfile gère automatiquement l'installation de :
 - La bibliothèque Mask R-CNN
 - Le téléchargement du modèle COCO
 - Les dépendances du projet
-
+-Les programmes python
 ### Dataset
 - **Taille** : 202 images de T-shirts
 - **Répartition** :
@@ -61,7 +61,7 @@ python inference.py
 ```
 
 ## Hyperparamètres et Configuration
-la première configuration pour l'entraînement du modèle est la suivante:
+la première configuration (config1) pour l'entraînement du modèle est la suivante:
 ### Configuration 1 du Modèle
 ```python
 IMAGES_PER_GPU = 1
@@ -113,6 +113,8 @@ On a utilisé le modèle entrainé sur de nouveaux images de test voici le résu
     <img src="config1/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
     <img src="config1/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
 </div>
+
+
 Pour explorer des possiblités d'amélioer ces résultats on a remplacé SGD par l'optimiseur Adam voici la nouvelle configurations
 
 ### Configuration 2 et 3 du Modèle
@@ -130,7 +132,7 @@ LEARNING_RATE = 0.01
 OPTIMIZER = 'adam' puis OPTIMIZER = 'sgd'  # Testé avec les deux optimiseurs
 ```
 
-Ces configurations avec un learning rate plus élevé (0.01 vs 0.001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient.
+Ces configurations avec un learning rate plus élevé (0.01 vs 0.0001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient.
 ```
 Epoch 1, Loss: 1.8442893350124359, Validation Loss: 1.3141049003601075
 Epoch 2, Loss: 1.3648225152492524, Validation Loss: 0.8775486958026886
