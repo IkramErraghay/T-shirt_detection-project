@@ -88,14 +88,13 @@ La perte de validation reste inférieure à la perte d'entraînement donc notre 
 #### 2. Dernière Ligne des Logs
 Les logs complets de l'entraînement sont sauvegardés dans deux fichiers :
 - training_logs.txt : Enregistre spécifiquement les losses et validation_losses de chaque époque (dans config1/training_logs.txt)
-  ```
+```
 Epoch 7, Loss: 0.474196954369545, Validation Loss: 0.5376814070343972
 Epoch 8, Loss: 0.5429598882049322, Validation Loss: 0.4835761894285679
 Epoch 9, Loss: 0.47915269307792185, Validation Loss: 0.3347528874874115
 Epoch 10, Loss: 0.5557353990525007, Validation Loss: 0.39468212202191355
 ```
 - log.txt : Contient tous les détails d'entraînement dans config1/log.txt
-
 Voici les derniers logs d'entraînement (Époque 10) :
 ```
  93/100 [==========================>...] - ETA: 1:52 - loss: 0.5784 - rpn_class_loss: 0.0215 - rpn_bbox_loss: 0.2328 - mrcnn_class_loss: 0.0207 - mrcnn_bbox_loss: 0.1109 - mrcnn_mask_loss: 0.1926
