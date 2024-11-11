@@ -78,10 +78,10 @@ Voici les differents résultats d'entrainement obtenus:
 
 #### 1. Courbe de Perte (Loss)
 
-Le graphe ci-dessous montre les training loss et validation loss.
+Le graphe ci-dessous montre l'évolution des pertes de training loss et validation loss sur 10 époques.
 
 ![Courbe d'entraînement](config1/training_validation_loss.png)
-*Figure 1: Évolution des pertes d'entraînement et de validation sur 10 époques*
+
 
 La perte de validation reste inférieure à la perte d'entraînement donc notre modèle généralise bien sans overfitting.
 
@@ -105,8 +105,10 @@ Voici les derniers logs d'entraînement (Époque 10) :
 #### 3. Exemples de Détection
 
 On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
-![Exemple de détection](sample_detection.png)
-*Figure 2: Exemples de détections sur des images de test*
+![Exemple de détection](config1/output/inference_IMG_0033.jpg)
+
+![Exemple de détection](config1/output/tshirt_inference_result.png)
+
 ### Hyperparamètres d'Entraînement
 - **Learning Rate** : 0.01
 - **Optimiseur** : Adam
