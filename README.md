@@ -19,20 +19,33 @@ project/
     └── annotations.json # Annotations des images
 ```
 
-## Configuration Technique
 
-### Prérequis
-- Python 3.x
-- TensorFlow
-- Mask R-CNN
-- Docker
 
-### Configuration de l'Environnement
-Le projet utilise Docker pour assurer une configuration cohérente. Pour construire l'image :
+### Préparation de l'Environnement
 
+Pour assurer une reproduction fiable de notre environnement de développement et vu les probèmes de compatibilité, nous avons mis en place un environnement Docker incluant toutes les dépendances nécessaires à Mask R-CNN avec les versions spécifiquese. Cette approche nous permet de garantir la cohérence des versions des bibliothèques et des dépendances.
+Nous avons configuré un environnement avec les versions suivantes :
+
+Python 3.5.4
+TensorFlow 1.5.0
+Keras 2.1.5
+Mask R-CNN (Implémentation Matterport)
+
+1. **Construction de l'image Docker**
 ```bash
 docker build -t tshirt-detection .
 ```
+
+2. **Lancement du conteneur**
+```bash
+docker run -it mask-rcnn-python35
+```
+
+le Dockerfile gère automatiquement l'installation de :
+- Les packages Python requis
+- La bibliothèque Mask R-CNN
+- Le téléchargement du modèle COCO
+- Les dépendances du projet
 
 ### Dataset
 - **Taille** : 202 images de T-shirts
