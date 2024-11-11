@@ -115,7 +115,7 @@ On a utilisé le modèle entrainé sur de nouveaux images de test voici le résu
 </div>
 Pour explorer des possiblités d'amélioer ces résultats on a remplacé SGD par l'optimiseur Adam voici la nouvelle configurations
 
-### Configuration 2 du Modèle
+### Configuration 2 et 3 du Modèle
 Nous avons testé deux configurations supplémentaires avec un learning rate plus élevé (0.01) en utilisant 'Adam' et 'SGD':
 
 ```python
@@ -127,7 +127,7 @@ EPOCHS = 10
 IMAGE_MAX_DIM = 256
 IMAGE_MIN_DIM = 256
 LEARNING_RATE = 0.01
-OPTIMIZER = ['adam', 'sgd']  # Testé avec les deux optimiseurs
+OPTIMIZER = 'adam' puis OPTIMIZER = 'sgd'  # Testé avec les deux optimiseurs
 ```
 
 Ces configurations avec un learning rate plus élevé (0.01 vs 0.001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient.
