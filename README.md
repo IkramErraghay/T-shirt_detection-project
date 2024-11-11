@@ -175,22 +175,21 @@ La perte de validation reste inférieure à la perte d'entraînement donc notre 
 Les logs complets de l'entraînement sont sauvegardés dans deux fichiers :
 - training_logs.txt : Enregistre spécifiquement les losses et validation_losses de chaque époque (dans config1/training_logs.txt)
 ```
-Epoch 7, Loss: 0.474196954369545, Validation Loss: 0.5376814070343972
-Epoch 8, Loss: 0.5429598882049322, Validation Loss: 0.4835761894285679
-Epoch 9, Loss: 0.47915269307792185, Validation Loss: 0.3347528874874115
-Epoch 10, Loss: 0.5557353990525007, Validation Loss: 0.39468212202191355
+Epoch 7, Loss: 0.8131893193721771, Validation Loss: 1.0762520363926888
+Epoch 8, Loss: 0.9904836884140968, Validation Loss: 1.0311627058684827
+Epoch 9, Loss: 0.8187637083232403, Validation Loss: 1.2170664118230343
+Epoch 10, Loss: 0.5796890249848365, Validation Loss: 1.0728977097570895
 ```
 - log.txt : Contient tous les détails d'entraînement dans config1/log.txt
 Voici les derniers logs d'entraînement (Époque 10) :
 ```
- 93/100 [==========================>...] - ETA: 1:52 - loss: 0.5784 - rpn_class_loss: 0.0215 - rpn_bbox_loss: 0.2328 - mrcnn_class_loss: 0.0207 - mrcnn_bbox_loss: 0.1109 - mrcnn_mask_loss: 0.1926
- 94/100 [===========================>..] - ETA: 1:36 - loss: 0.5751 - rpn_class_loss: 0.0213 - rpn_bbox_loss: 0.2312 - mrcnn_class_loss: 0.0206 - mrcnn_bbox_loss: 0.1105 - mrcnn_mask_loss: 0.1916
- 95/100 [===========================>..] - ETA: 1:20 - loss: 0.5760 - rpn_class_loss: 0.0211 - rpn_bbox_loss: 0.2332 - mrcnn_class_loss: 0.0204 - mrcnn_bbox_loss: 0.1108 - mrcnn_mask_loss: 0.1904
- 96/100 [===========================>..] - ETA: 1:04 - loss: 0.5713 - rpn_class_loss: 0.0209 - rpn_bbox_loss: 0.2310 - mrcnn_class_loss: 0.0202 - mrcnn_bbox_loss: 0.1102 - mrcnn_mask_loss: 0.1890
- 97/100 [============================>.] - ETA: 48s - loss: 0.5674 - rpn_class_loss: 0.0208 - rpn_bbox_loss: 0.2292 - mrcnn_class_loss: 0.0201 - mrcnn_bbox_loss: 0.1093 - mrcnn_mask_loss: 0.1879 
- 98/100 [============================>.] - ETA: 32s - loss: 0.5641 - rpn_class_loss: 0.0206 - rpn_bbox_loss: 0.2273 - mrcnn_class_loss: 0.0200 - mrcnn_bbox_loss: 0.1093 - mrcnn_mask_loss: 0.1869
- 99/100 [============================>.] - ETA: 16s - loss: 0.5597 - rpn_class_loss: 0.0204 - rpn_bbox_loss: 0.2254 - mrcnn_class_loss: 0.0198 - mrcnn_bbox_loss: 0.1085 - mrcnn_mask_loss: 0.1856
-100/100 [==============================] - 1709s 17s/step - loss: 0.5557 - rpn_class_loss: 0.0202 - rpn_bbox_loss: 0.2235 - mrcnn_class_loss: 0.0197 - mrcnn_bbox_loss: 0.1078 - mrcnn_mask_loss: 0.1845 - val_loss: 0.3947 - val_rpn_class_loss: 0.0094 - val_rpn_bbox_loss: 0.1267 - val_mrcnn_class_loss: 0.0123 - val_mrcnn_bbox_loss: 0.1065 - val_mrcnn_mask_loss: 0.1396
+
+45/50 [==========================>...] - ETA: 1:24 - loss: 0.5744 - rpn_class_loss: 0.0116 - rpn_bbox_loss: 0.1502 - mrcnn_class_loss: 0.0308 - mrcnn_bbox_loss: 0.1592 - mrcnn_mask_loss: 0.2225
+46/50 [==========================>...] - ETA: 1:07 - loss: 0.5658 - rpn_class_loss: 0.0113 - rpn_bbox_loss: 0.1482 - mrcnn_class_loss: 0.0302 - mrcnn_bbox_loss: 0.1565 - mrcnn_mask_loss: 0.2195
+47/50 [===========================>..] - ETA: 50s - loss: 0.5574 - rpn_class_loss: 0.0111 - rpn_bbox_loss: 0.1454 - mrcnn_class_loss: 0.0297 - mrcnn_bbox_loss: 0.1549 - mrcnn_mask_loss: 0.2164 
+48/50 [===========================>..] - ETA: 33s - loss: 0.5679 - rpn_class_loss: 0.0112 - rpn_bbox_loss: 0.1456 - mrcnn_class_loss: 0.0293 - mrcnn_bbox_loss: 0.1597 - mrcnn_mask_loss: 0.2222
+49/50 [============================>.] - ETA: 16s - loss: 0.5843 - rpn_class_loss: 0.0115 - rpn_bbox_loss: 0.1449 - mrcnn_class_loss: 0.0300 - mrcnn_bbox_loss: 0.1710 - mrcnn_mask_loss: 0.2269
+50/50 [==============================] - 966s 19s/step - loss: 0.5797 - rpn_class_loss: 0.0114 - rpn_bbox_loss: 0.1452 - mrcnn_class_loss: 0.0300 - mrcnn_bbox_loss: 0.1686 - mrcnn_mask_loss: 0.2245 - val_loss: 1.0729 - val_rpn_class_loss: 0.0344 - val_rpn_bbox_loss: 0.4353 - val_mrcnn_class_loss: 0.0373 - val_mrcnn_bbox_loss: 0.2907 - val_mrcnn_mask_loss: 0.2752
 ```
 
 #### 3. Exemples de Détection
