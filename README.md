@@ -197,7 +197,7 @@ Voici les derniers logs d'entraînement (Époque 10) :
 On a utilisé le modèle entrainé sur de nouveaux images de test voici le résultat:
 <div style="display: flex; justify-content: center; gap: 30px;">
     <img src="config4/output/inference_IMG_0033.jpg" alt="Exemple de détection" width="500"/>
-    <img src="config4/output/tshirt_inference_result.png" alt="Exemple de détection" width="500"/>
+    <img src="config4/output/inference_avec-une-bonne-organisation-le-premier-atout-du-batch-cooking-est-le-gain-de-temps-photo-adobe-stock-1686065096.jpg" alt="Exemple de détection" width="500"/>
 </div>
 
 
