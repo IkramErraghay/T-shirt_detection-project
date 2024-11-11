@@ -1,0 +1,10 @@
+Epoch 1, Loss: 2.42326469540596, Validation Loss: 1.411249406337738
+Epoch 2, Loss: 1.147503741979599, Validation Loss: 0.9779561793804169
+Epoch 3, Loss: 1.0001301181316375, Validation Loss: 1.2082563996315003
+Epoch 4, Loss: 1.7353490442037582, Validation Loss: 1.4318502235412598
+Epoch 5, Loss: 1.120772659778595, Validation Loss: 0.8980869150161743
+Epoch 6, Loss: 1.258629242181778, Validation Loss: 1.3400370502471923
+Epoch 7, Loss: nan, Validation Loss: nan
+Epoch 8, Loss: nan, Validation Loss: nan
+Epoch 9, Loss: nan, Validation Loss: nan
+Epoch 10, Loss: nan, Validation Loss: nan
