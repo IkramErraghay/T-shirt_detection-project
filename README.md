@@ -9,10 +9,10 @@ Ce projet implémente un système de détection et de segmentation de T-shirts u
 Pour assurer une reproduction fiable de notre environnement de développement et vu les probèmes de compatibilité, nous avons mis en place un environnement Docker incluant toutes les dépendances nécessaires à Mask R-CNN avec les versions spécifiquese. Cette approche nous permet de garantir la cohérence des versions des bibliothèques et des dépendances.
 Nous avons configuré un environnement avec les versions suivantes :
 
-Python 3.5.4
-TensorFlow 1.5.0
-Keras 2.1.5
-Mask R-CNN (Implémentation Matterport)
+- Python 3.5.4
+- TensorFlow 1.5.0
+- Keras 2.1.5
+- Mask R-CNN (Implémentation Matterport)
 
 1. **Construction de l'image Docker**
 ```bash
