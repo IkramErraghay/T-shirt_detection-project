@@ -33,7 +33,10 @@ le Dockerfile gère automatiquement l'installation de :
 
 ### Dataset
 - **Taille** : 202 images de T-shirts
-- **Format** : Annotations au format JSON par VIA pour l'annotation 
+- **Répartition** :
+   Entraînement : 162 images (80%)
+   Validation : 40 images (20%)
+- **Format** : Masques polygonaux pour une segmentation précise 
 - **Structure** : Images labélisées avec des masques polygonaux
 
 ## Structure du Projet
