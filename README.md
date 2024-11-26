@@ -133,7 +133,7 @@ LEARNING_RATE = 0.01
 OPTIMIZER = 'adam' puis OPTIMIZER = 'sgd'  # Testé avec les deux optimiseurs
 ```
 
-Ces configurations avec un learning rate plus élevé (0.01 vs 0.0001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient. [config2](./config2/log.txt)  et [config3](./config3/log.txt)
+Ces configurations avec un learning rate plus élevé (0.01 vs 0.0001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient. [config2](./config2/log.txt)
 ```
 Epoch 1, Loss: 1.8442893350124359, Validation Loss: 1.3141049003601075
 Epoch 2, Loss: 1.3648225152492524, Validation Loss: 0.8775486958026886
