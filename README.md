@@ -133,7 +133,7 @@ LEARNING_RATE = 0.01
 OPTIMIZER = 'adam' puis OPTIMIZER = 'sgd'  # Testé avec les deux optimiseurs
 ```
 
-Ces configurations avec un learning rate plus élevé (0.01 vs 0.0001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient.
+Ces configurations avec un learning rate plus élevé (0.01 vs 0.0001 de la première config) ont conduit à une divergence du modèle. À partir de l'époque 7, nous avons obtenu des valeurs 'NaN' pour la loss, indiquant une explosion du gradient. [config2](./config2/log.txt)  et [config3](./config3/log.txt)
 ```
 Epoch 1, Loss: 1.8442893350124359, Validation Loss: 1.3141049003601075
 Epoch 2, Loss: 1.3648225152492524, Validation Loss: 0.8775486958026886
@@ -174,7 +174,7 @@ La perte de validation reste inférieure à la perte d'entraînement supérieure
 
 #### 2. Dernière Ligne des Logs
 Les logs complets de l'entraînement sont sauvegardés dans deux fichiers :
-- training_logs.txt : Enregistre spécifiquement les losses et validation_losses de chaque époque (dans config1/training_logs.txt)
+- training_logs.txt : Enregistre spécifiquement les losses et validation_losses de chaque époque (dans [config4](./config4/log.txt))
 ```
 Epoch 7, Loss: 0.8131893193721771, Validation Loss: 1.0762520363926888
 Epoch 8, Loss: 0.9904836884140968, Validation Loss: 1.0311627058684827
